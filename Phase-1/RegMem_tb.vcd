@@ -1,0 +1,178 @@
+$date
+	Sun Feb 22 14:12:57 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module RegMem_tb $end
+$var wire 64 ! read_data2 [63:0] $end
+$var wire 64 " read_data1 [63:0] $end
+$var reg 1 # clk $end
+$var reg 5 $ read_reg1 [4:0] $end
+$var reg 5 % read_reg2 [4:0] $end
+$var reg 1 & reg_write_en $end
+$var reg 1 ' reset $end
+$var reg 64 ( write_data [63:0] $end
+$var reg 5 ) write_reg [4:0] $end
+$scope module uut $end
+$var wire 1 # clk $end
+$var wire 5 * read_reg1 [4:0] $end
+$var wire 5 + read_reg2 [4:0] $end
+$var wire 1 & reg_write_en $end
+$var wire 1 ' reset $end
+$var wire 64 , write_data [63:0] $end
+$var wire 5 - write_reg [4:0] $end
+$var wire 64 . read_data2 [63:0] $end
+$var wire 64 / read_data1 [63:0] $end
+$var integer 32 0 i [31:0] $end
+$scope task dump_registers $end
+$var integer 32 1 cycle_count [31:0] $end
+$var integer 32 2 file_handle [31:0] $end
+$var integer 32 3 j [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx 3
+bx 2
+bx 1
+b100000 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+1'
+0&
+b0 %
+b0 $
+0#
+b0 "
+b0 !
+$end
+#5000
+b100000 0
+1#
+#10000
+0#
+b1 $
+b1 *
+0'
+#15000
+b1101111010101101101111101110111111001010111111101011101010111110 "
+b1101111010101101101111101110111111001010111111101011101010111110 /
+b1101111010101101101111101110111111001010111111101011101010111110 (
+b1101111010101101101111101110111111001010111111101011101010111110 ,
+b1 )
+b1 -
+1&
+1#
+#20000
+0#
+#25000
+0&
+1#
+#30000
+0#
+#35000
+b1111111111111111111111111111111111111111111111111111111111111111 (
+b1111111111111111111111111111111111111111111111111111111111111111 ,
+b0 )
+b0 -
+1&
+1#
+#40000
+0#
+#45000
+b0 "
+b0 /
+b0 $
+b0 *
+0&
+1#
+#50000
+0#
+#55000
+b1010 (
+b1010 ,
+b10 )
+b10 -
+1&
+1#
+#60000
+0#
+#65000
+b10100 (
+b10100 ,
+b11 )
+b11 -
+1#
+#70000
+0#
+#75000
+b10100 !
+b10100 .
+b1010 "
+b1010 /
+b11 %
+b11 +
+b10 $
+b10 *
+0&
+1#
+#76000
+b10100 "
+b10100 /
+b11 $
+b11 *
+#77000
+b0 "
+b0 /
+b0 !
+b0 .
+b100000 0
+1'
+#80000
+0#
+#85000
+b100000 0
+1#
+#87000
+b10 %
+b10 +
+b1 $
+b1 *
+0'
+#90000
+0#
+#95000
+b1001000110100010101100111100010011010101111001101111011110000 (
+b1001000110100010101100111100010011010101111001101111011110000 ,
+b101 )
+b101 -
+1&
+1#
+#100000
+0#
+#105000
+b1001000110100010101100111100010011010101111001101111011110000 "
+b1001000110100010101100111100010011010101111001101111011110000 /
+b101 $
+b101 *
+0&
+1#
+#106000
+b100000 3
+b10000000000000000000000000000011 2
+b101010 1

@@ -1,0 +1,15 @@
+addi x2, x0, 5          # x2 = 5 
+addi x3, x0, 10         # x3 = 10 
+add x1, x2, x3          # x1 = x2 + x3 = 15
+sub x2, x2, x3          # x2 = x2 - x3 = -5
+and x4, x3, x3          # x4 = x3 & x3 = 10
+and x5, x3, x4          # x5 = x3 & x4 = 10
+or x6, x2, x4           # x6 = x2 | x4 = -5
+or x7, x2, x3           # x7 = x2 | x3 = -5
+sd x1, 0(x5)            # x1 is stored at memory address x5 + 0 (10 + 0 = 10)
+ld x10, 0(x5)           # x10 = memory[x5 + 0] = memory[10] = 15
+sd x6, 24(x5)            # x6 is stored at memory address x5 + 24 (10 + 24 = 34)
+ld x11, 24(x5)           # x11 = memory[x5 + 24] = memory[34] = -5
+beq x4, x5, 8           # if x4 == x5, branch to PC + 8 (so skip the next instruction)
+beq x0, x0, 0           # if x0 == x0, branch to PC + 0 (infinite loop)
+add x13, x1, x10        # x13 = x1 + x10 = 30

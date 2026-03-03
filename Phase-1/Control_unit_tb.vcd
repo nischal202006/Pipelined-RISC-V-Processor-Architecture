@@ -1,0 +1,95 @@
+$date
+	Sun Feb 22 14:29:05 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module control_unit_tb $end
+$var wire 1 ! RegWrite $end
+$var wire 1 " MemtoReg $end
+$var wire 1 # MemWrite $end
+$var wire 1 $ MemRead $end
+$var wire 1 % Branch $end
+$var wire 1 & ALUSrc $end
+$var wire 2 ' ALUOp [1:0] $end
+$var reg 7 ( opcode [6:0] $end
+$scope module uut $end
+$var wire 7 ) opcode [6:0] $end
+$var parameter 7 * BRANCH $end
+$var parameter 7 + I_TYPE $end
+$var parameter 7 , LOAD $end
+$var parameter 7 - R_TYPE $end
+$var parameter 7 . STORE $end
+$var reg 2 / ALUOp [1:0] $end
+$var reg 1 & ALUSrc $end
+$var reg 1 % Branch $end
+$var reg 1 $ MemRead $end
+$var reg 1 # MemWrite $end
+$var reg 1 " MemtoReg $end
+$var reg 1 ! RegWrite $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b100011 .
+b110011 -
+b11 ,
+b10011 +
+b1100011 *
+$end
+#0
+$dumpvars
+b10 /
+b110011 )
+b110011 (
+b10 '
+0&
+0%
+0$
+0#
+0"
+1!
+$end
+#1000
+1&
+1!
+b11 '
+b11 /
+b10011 (
+b10011 )
+#2000
+1"
+1$
+1!
+1&
+b0 '
+b0 /
+b11 (
+b11 )
+#3000
+1#
+0!
+1&
+0"
+0$
+b100011 (
+b100011 )
+#4000
+b1 '
+b1 /
+1%
+0&
+0#
+b1100011 (
+b1100011 )
+#5000
+b0 '
+b0 /
+0%
+b1111111 (
+b1111111 )
+#6000

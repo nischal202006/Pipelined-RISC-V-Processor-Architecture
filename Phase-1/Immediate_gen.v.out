@@ -1,0 +1,102 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000028574132940 .scope module, "immediate_gen" "immediate_gen" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "instr";
+    .port_info 1 /OUTPUT 64 "immediate_val";
+P_0000028574132ad0 .param/l "B_TYPE" 1 2 7, C4<1100011>;
+P_0000028574132b08 .param/l "I_TYPE_ALU" 1 2 4, C4<0010011>;
+P_0000028574132b40 .param/l "I_TYPE_LD" 1 2 5, C4<0000011>;
+P_0000028574132b78 .param/l "S_TYPE" 1 2 6, C4<0100011>;
+v0000028574133000_0 .var "immediate_val", 63 0;
+o0000028574167008 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000028574132bc0_0 .net "instr", 31 0, o0000028574167008;  0 drivers
+E_000002857411c840 .event anyedge, v0000028574132bc0_0;
+    .scope S_0000028574132940;
+T_0 ;
+    %wait E_000002857411c840;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 7, 0, 2;
+    %dup/vec4;
+    %pushi/vec4 19, 0, 7;
+    %cmp/u;
+    %jmp/1 T_0.0, 6;
+    %dup/vec4;
+    %pushi/vec4 3, 0, 7;
+    %cmp/u;
+    %jmp/1 T_0.1, 6;
+    %dup/vec4;
+    %pushi/vec4 35, 0, 7;
+    %cmp/u;
+    %jmp/1 T_0.2, 6;
+    %dup/vec4;
+    %pushi/vec4 99, 0, 7;
+    %cmp/u;
+    %jmp/1 T_0.3, 6;
+    %pushi/vec4 0, 0, 64;
+    %store/vec4 v0000028574133000_0, 0, 64;
+    %jmp T_0.5;
+T_0.0 ;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 1, 31, 6;
+    %replicate 52;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 12, 20, 6;
+    %concat/vec4; draw_concat_vec4
+    %store/vec4 v0000028574133000_0, 0, 64;
+    %jmp T_0.5;
+T_0.1 ;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 1, 31, 6;
+    %replicate 52;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 12, 20, 6;
+    %concat/vec4; draw_concat_vec4
+    %store/vec4 v0000028574133000_0, 0, 64;
+    %jmp T_0.5;
+T_0.2 ;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 1, 31, 6;
+    %replicate 52;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 7, 25, 6;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 5, 7, 4;
+    %concat/vec4; draw_concat_vec4
+    %store/vec4 v0000028574133000_0, 0, 64;
+    %jmp T_0.5;
+T_0.3 ;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 1, 31, 6;
+    %replicate 52;
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 1, 31, 6;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 1, 7, 4;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 6, 25, 6;
+    %concat/vec4; draw_concat_vec4
+    %load/vec4 v0000028574132bc0_0;
+    %parti/s 4, 8, 5;
+    %concat/vec4; draw_concat_vec4
+    %store/vec4 v0000028574133000_0, 0, 64;
+    %jmp T_0.5;
+T_0.5 ;
+    %pop/vec4 1;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Immediate_gen.v";
