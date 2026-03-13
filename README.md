@@ -1,5 +1,5 @@
 # RISC-V 64-bit Pipelined Processor
-**Author**:Nischal,,Kowshikh,Shashank
+**Author**:G.Nischal,R.Kowshikh,B.V.Shashank.
 A complete implementation of a 64-bit RISC-V (RV64I) processor architecture using Verilog HDL. This project demonstrates the design and simulation of both a Single-Cycle (Phase 1) and a 5-Stage Pipelined (Phase 2) processor, supporting a comprehensive subset of the RISC-V instruction set.
 
 ## Project Overview
